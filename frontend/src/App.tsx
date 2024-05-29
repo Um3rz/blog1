@@ -9,6 +9,7 @@ function App() {
 
   return (
     <>
+      <div>HOME</div>
       <BrowserRouter>
         <Routes>
           <Route path="/signup" element={<Signup />} />
