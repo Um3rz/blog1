@@ -9,7 +9,8 @@ lerna-debug.log*
 
 node_modules
 
-
+backend
+common
 *.local
 
 # Editor directories and files
