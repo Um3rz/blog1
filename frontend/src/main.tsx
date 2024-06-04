@@ -1,10 +1,17 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import { createRoot } from "react-dom/client";
+import './index.css';
+import App from "./App";
+import { AuthProvider } from "./AuthContext";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+// Ensure the root element exists in your HTML file
+const container = document.getElementById("root");
+if (!container) {
+  throw new Error("Root container missing in HTML");
+}
+
+const root = createRoot(container);
+root.render(
+  <AuthProvider>
     <App />
-  </React.StrictMode>,
-)
+  </AuthProvider>
+);
